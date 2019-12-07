@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script type="module">
+        import EventManager from './event-manager.js';
+
+        let event_manager = new EventManager();
+        event_manager.AddListener('event', () => {console.log('event!')});
+        event_manager.TriggerEvent('event');
+        event_manager.RemoveListener('event', () => {console.log('event!')});
+    </script>
+</body>
+</html>
