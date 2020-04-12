@@ -1,11 +1,17 @@
 {
-  "name": "event-bus",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Nico Schoeman",
-  "license": "ISC"
+	"name": "@nico-schoeman/event-bus",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"auth": "npm login --registry=https://npm.pkg.github.com/",
+		"publish": "npm publish"
+	},
+	"author": "Nico Schoeman",
+	"license": "ISC",
+	"repository": "git://github.com/nico-schoeman/force-graph.git",
+	"publishConfig": {
+		"registry": "https://npm.pkg.github.com/"
+	}
 }
