@@ -1,6 +1,6 @@
 {
 	"name": "@nico-schoeman/event-bus",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "",
 	"main": "index.js",
 	"scripts": {
@@ -10,7 +10,7 @@
 	},
 	"author": "Nico Schoeman",
 	"license": "ISC",
-	"repository": "git://github.com/nico-schoeman/force-graph.git",
+	"repository": "git://github.com/nico-schoeman/event-bus.git",
 	"publishConfig": {
 		"registry": "https://npm.pkg.github.com/"
 	}
