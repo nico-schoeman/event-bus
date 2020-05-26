@@ -10,10 +10,23 @@
     <script type="module">
         import EventManager from './event-manager.js';
 
+        let callback1 = () => {console.log('event!')};
+        let callback2 = (arg1, arg2) => {console.log('event!', arg1, arg2)}
+        let handler = (...args) => {
+          args = args.map(arg => arg+1);
+          return args;
+        };
+
         let event_manager = new EventManager();
-        event_manager.AddListener('event', () => {console.log('event!')});
+        event_manager.AddListener('event', callback1);
         event_manager.TriggerEvent('event');
-        event_manager.RemoveListener('event', () => {console.log('event!')});
+        event_manager.RemoveListener('event', callback1);
+
+        event_manager.AddListener('event', callback2);
+        event_manager.AddInterceptor('event', handler);
+        event_manager.TriggerEvent('event', 1, 2);
+        event_manager.RemoveListener('event', callback2);
+        console.log(event_manager);
     </script>
 </body>
 </html>
